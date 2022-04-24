@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MyBlindTouch</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/style.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/MyBlindTouch.styles.css" asp-append-version="true" />
+    <!-- font-awesome -->
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Exo:400,700" rel="stylesheet"> 
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</head>
+<body>
+    <div id="content">
+         <!--audio--->
+     <div id="bgmAudio"><audio autoplay mute loop><source src="~/sound/かえるのピアノ.mp3" type="audio/mp3"></audio></div>
+     <div id="trueAudio"><audio ><source src="~/sound/クイズ正解2.mp3"type="audio/mp3"></audio></div>
+     <div id="falseAudio"><audio><source src="~/sound/クイズ不正解2.mp3"type="audio/mp3" ></audio></div>
+     <div id="countdownAudio"><audio><source src="~/sound/stopwatch1.mp3"type="audio/mp3" ></audio></div>
+     <div id="whistleAudio"><audio><source src="~/sound/shrill_whistle1.mp3"type="audio/mp3" ></audio></div>
+     <div id="clickAudio"><audio autoplay><source src="~/sound/決定、ボタン押下44.mp3"></audio></div>
+     <div id="btnhoverAudio"><audio><source src="~/sound/決定、ボタン押下42.mp3"></audio></div>
+        
+    </div>
+    <div class="area" >
+                <ul class="circles">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                </ul>
+        </div >
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            <script type="text/javascript">
+        </script>
+            @RenderBody()
+        </main>
+        
+    </div>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>    
+    <script src="~/js/game.js" asp-append-version="true"></script>    
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,145 @@
+/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+*[b-fe31aa2zzp],
+*[b-fe31aa2zzp]:before,
+*[b-fe31aa2zzp]:after {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+*[b-fe31aa2zzp] {
+    margin: 0px;
+    padding: 0px;
+}
+
+html[b-fe31aa2zzp] {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+body[b-fe31aa2zzp] {
+    font-family: 'Exo', sans-serif;
+}
+
+.area[b-fe31aa2zzp] {
+    background: #00CCFF;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: -1;
+}
+
+.circles[b-fe31aa2zzp] {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+    .circles li[b-fe31aa2zzp] {
+        position: absolute;
+        z-index: -1;
+        display: block;
+        list-style: none;
+        width: 20px;
+        height: 20px;
+        background: rgba(255, 255, 255, 0.2);
+        animation: animate-b-fe31aa2zzp 25s linear infinite;
+        bottom: -150px;
+    }
+
+        .circles li:nth-child(1)[b-fe31aa2zzp] {
+            left: 25%;
+            width: 80px;
+            height: 80px;
+            animation-delay: 0s;
+        }
+
+
+        .circles li:nth-child(2)[b-fe31aa2zzp] {
+            left: 10%;
+            width: 20px;
+            height: 20px;
+            animation-delay: 2s;
+            animation-duration: 12s;
+        }
+
+        .circles li:nth-child(3)[b-fe31aa2zzp] {
+            left: 70%;
+            width: 20px;
+            height: 20px;
+            animation-delay: 4s;
+        }
+
+        .circles li:nth-child(4)[b-fe31aa2zzp] {
+            left: 40%;
+            width: 60px;
+            height: 60px;
+            animation-delay: 0s;
+            animation-duration: 18s;
+        }
+
+        .circles li:nth-child(5)[b-fe31aa2zzp] {
+            left: 65%;
+            width: 20px;
+            height: 20px;
+            animation-delay: 0s;
+        }
+
+        .circles li:nth-child(6)[b-fe31aa2zzp] {
+            left: 75%;
+            width: 110px;
+            height: 110px;
+            animation-delay: 3s;
+        }
+
+        .circles li:nth-child(7)[b-fe31aa2zzp] {
+            left: 35%;
+            width: 150px;
+            height: 150px;
+            animation-delay: 7s;
+        }
+
+        .circles li:nth-child(8)[b-fe31aa2zzp] {
+            left: 50%;
+            width: 25px;
+            height: 25px;
+            animation-delay: 15s;
+            animation-duration: 45s;
+        }
+
+        .circles li:nth-child(9)[b-fe31aa2zzp] {
+            left: 20%;
+            width: 15px;
+            height: 15px;
+            animation-delay: 2s;
+            animation-duration: 35s;
+        }
+
+        .circles li:nth-child(10)[b-fe31aa2zzp] {
+            left: 85%;
+            width: 150px;
+            height: 150px;
+            animation-delay: 0s;
+            animation-duration: 11s;
+        }
+
+@keyframes animate-b-fe31aa2zzp {
+
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+
+    100% {
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+}
