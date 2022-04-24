@@ -16,11 +16,10 @@ namespace MyBlindTouch.Controllers
     public class GameController : Controller
     {
         private readonly MyBlindTouchContext _copycontext;
-        public GameController(MyBlindTouchContext copycontext)
+        public GameController(MyBlindTouchContext context)
         {
-            _copycontext= copycontext;
+            _copycontext= context;
         }
-        [Route("Index")]
         //非同期メソッド
         public async Task<IActionResult> Index()
         {
@@ -31,7 +30,8 @@ namespace MyBlindTouch.Controllers
             {
                 model.QuizStrCopy.Add(item.QuizStr);
             }
-            return View(model);
+            
+            return View(model);//modelごと送って送り先でプロパティから参照
         }
         [Route("Index2")]
         public IActionResult Index2()

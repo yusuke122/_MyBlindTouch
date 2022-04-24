@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using MyBlindTouch.Data;
@@ -21,6 +22,7 @@ namespace MyBlindTouch.Controllers
         }
 
         // GET: QuizModels
+        [HttpGet]
         public async Task<IActionResult> Index()
         {
             return View(await _context.QuizModel.ToListAsync());
