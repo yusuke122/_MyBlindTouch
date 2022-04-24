@@ -7,7 +7,7 @@
 
 <div class="banner">
     <h3>時間の設定</h3>
-    <form method="post" asp-controller="Game" asp-action="Index">
+    <form method="post" asp-controller="Settings" asp-action="SetValue">
         プレイ時間：<input type="number"name="gametime"min=10 value=@ViewBag.gametime />秒</br>
         解答時間：<input type="number"name="questiontime"min=1 value=@ViewBag.questiontime />秒</br>
     </br>
