@@ -12,12 +12,11 @@
         解答時間：<input type="number"name="questiontime"min=1 value=@ViewBag.questiontime />秒</br>
     </br>
     <h3>音の設定</h3>
-    @ViewBag.soundonoff
         ON @Html.RadioButtonFor(expression:model=>model.SoundOnOff,value:"soundon")
         OFF @Html.RadioButtonFor(expression:model=>model.SoundOnOff,value:"soundoff")</br>
         音量:<input type="number"name="gamesound"min=1 max=100 value=@ViewBag.gamesound />
         </br>
-        <input type="submit"value="変更">
+        <input type="submit"value="変更"class="btn btn-defaultLayout">
+        <a asp-controller="Home" asp-action="Index"class="btn btn-defaultLayout">戻る</a>
     </form>
-
 </div>

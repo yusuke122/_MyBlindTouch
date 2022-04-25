@@ -1,0 +1,28 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<div class="banner">
+    <h2 id="gametimeid">gametime=@ViewBag.gametime</h2>
+    <h2>questiontime=@ViewBag.questiontime</h2>
+    <h2>onoff=@ViewBag.soundonoff</h2>
+    <h2>gamesound=@ViewBag.gamesound</h2>
+    <table class="table">
+    <thead>
+        <tr>
+            <th>
+                @{
+                    foreach (var item in Model.QuizStrCopy)
+                    {
+                        <h2>@item</h2>
+                    }
+                }
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    </table>
+
+  <a asp-controller="Home" asp-action="Index"class="btn btn-defaultLayout">戻る</a>
+</div>

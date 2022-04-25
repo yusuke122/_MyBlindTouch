@@ -15,12 +15,12 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\youfu\programming\MyBlindTouch\MyBlindTouch\MyBlindTouch
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/youfu/programming/MyBlindTouch/MyBlindTouch/MyBlindTouch/Views/Game/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2FtZVxJbmRleC5jc2h0bWw=
+[C:/Users/youfu/programming/MyBlindTouch/MyBlindTouch/MyBlindTouch/Views/Game/Game.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2FtZVxHYW1lLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/youfu/programming/MyBlindTouch/MyBlindTouch/MyBlindTouch/Views/Game/Index2.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2FtZVxJbmRleDIuY3NodG1s
+[C:/Users/youfu/programming/MyBlindTouch/MyBlindTouch/MyBlindTouch/Views/Game/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2FtZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/youfu/programming/MyBlindTouch/MyBlindTouch/MyBlindTouch/Views/Home/Index.cshtml]
@@ -49,10 +49,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/youfu/programming/MyBlindTouch/MyBlindTouch/MyBlindTouch/Views/QuizModel/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUXVpek1vZGVsXEluZGV4LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/youfu/programming/MyBlindTouch/MyBlindTouch/MyBlindTouch/Views/Settings/CheckValue.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2V0dGluZ3NcQ2hlY2tWYWx1ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/youfu/programming/MyBlindTouch/MyBlindTouch/MyBlindTouch/Views/Settings/Index.cshtml]
