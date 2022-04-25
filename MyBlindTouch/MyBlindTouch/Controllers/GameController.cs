@@ -37,6 +37,7 @@ namespace MyBlindTouch.Controllers
             
             return View(model);//modelごと送って送り先でプロパティから参照
         }
+        
         [HttpPost]
         public async Task<IActionResult> Game()
         {
@@ -45,6 +46,7 @@ namespace MyBlindTouch.Controllers
             ViewBag.gamesound = HttpContext.Session.GetInt32("gamesound");//データ変更 ログイン画面は変更、遷移先は取得
             ViewBag.soundonoff = HttpContext.Session.GetString("soundonoff");//データ変更 ログイン画面は変更、遷移先は取得
             GameModel model = new GameModel();
+            
             var alldata = await _copycontext.QuizModel.ToListAsync();//全データ読み込み
             var getdata = await _copycontext.QuizModel.Where(x => x.Id >= 0).ToListAsync();//LINQで特定のデータを読み込み
             foreach (var item in getdata)

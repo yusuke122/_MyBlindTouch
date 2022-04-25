@@ -1,5 +1,6 @@
 ﻿@{
         ViewData["Title"] = "MyBlindTouch-game_index";
+        //https://shuhelohelo.hatenablog.com/entry/2019/10/29/131039
 }
 @model MyBlindTouch.Models.GameModel
 @using Microsoft.AspNetCore.Http
@@ -7,9 +8,13 @@
 <div class="banner">
     <form method="post" asp-controller="Game" asp-action="Game">
         <h2>出題範囲</h2>
-        初級 @Html.EditorFor(expression:model=>model.ElementLevel)</br>
-        中級 @Html.EditorFor(expression:model=>model.MiddleLevel)</br>
-        上級 @Html.EditorFor(expression:model=>model.TopLevel)</br>
+        @{
+            for(var i=0;i<3;i++)
+            {
+                <input asp-for="@Model.LevelList[i]"/>
+                <label asp-for="@Model.LevelList[i]">@Model.LevelListName[i]</label>
+            }
+        }
         <input type="submit"value="ゲーム開始"class="btn btn-defaultLayout">
         <a asp-controller="Home" asp-action="Index"class="btn btn-defaultLayout">戻る</a>
     </form>
