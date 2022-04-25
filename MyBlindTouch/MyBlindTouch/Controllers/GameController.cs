@@ -48,8 +48,8 @@ namespace MyBlindTouch.Controllers
             GameModel model = new GameModel();
             
             var alldata = await _copycontext.QuizModel.ToListAsync();//全データ読み込み
-            var getdata = await _copycontext.QuizModel.Where(x => x.Id >= 0).ToListAsync();//LINQで特定のデータを読み込み
-            foreach (var item in getdata)
+           // var getdata = await _copycontext.QuizModel.Where(x => x.Id >= 0).ToListAsync();//LINQで特定のデータを読み込み
+            foreach (var item in alldata)
             {
                 model.QuizStrCopy.Add(item.QuizStr);
             }
