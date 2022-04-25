@@ -12,8 +12,12 @@
     <thead>
         <tr>
             <th>
-                @{
-                    foreach (var item in Model.QuizStrCopy)
+                    @{
+                        if(Model.ElementLevel)
+                        {
+                            <h2>element level catch</h2>
+                        }
+                        foreach (var item in Model.QuizStrCopy)
                     {
                         <h2>@item</h2>
                     }

@@ -7,10 +7,9 @@
 <div class="banner">
     <form method="post" asp-controller="Game" asp-action="Game">
         <h2>出題範囲</h2>
-        初級 @Html.CheckBoxFor(expression:model=>model.ElementLevel)</br>
-        中級 @Html.CheckBoxFor(expression:model=>model.MiddleLevel)</br>
-        上級 @Html.CheckBoxFor(expression:model=>model.TopLevel)</br>
-        </br>
+        初級 @Html.EditorFor(expression:model=>model.ElementLevel)</br>
+        中級 @Html.EditorFor(expression:model=>model.MiddleLevel)</br>
+        上級 @Html.EditorFor(expression:model=>model.TopLevel)</br>
         <input type="submit"value="ゲーム開始"class="btn btn-defaultLayout">
         <a asp-controller="Home" asp-action="Index"class="btn btn-defaultLayout">戻る</a>
     </form>
