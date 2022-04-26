@@ -16,20 +16,25 @@
                         <h2>gamesound=@ViewBag.gamesound</h2>
                         foreach (var item in Model.LevelList)
                         {
-                         <p>@item</p>  
+                        <p>@item</p>  
                         }//値が渡されていることが確認できた
                         */
-                       /*
-                        foreach (var item in Model.QuizStrCopy)
-                        {
-                        <h3>@item</h3>
-                        }*///値が渡されていることが確認できた
-                        //linqで指定されたステージの文字列のみ参照
+                        /*
                          foreach (var item in Model.QuizStrCopy)
                         {
-                        <h3>@item</h3>
+                         <h3>@item</h3>
+                        }*///値が渡されていることが確認できた
+                         //linqで指定されたステージの文字列のみ参照
+                            //Model.LevelCopyとModel.QuizStrCopyを連結？
+                            //linqで表示する文字列を抽出、抽出後json,jsで表示
+
+                        var QuizStrDIct = new Dictionary<string, string>();
+                        for (int i=0;i<Model.QuizStrCopy.Count;i++)
+                        {
+                            QuizStrDIct[Model.QuizStrCopy[i]] = Model.LevelCopy[i];
                         }
-                    
+                        
+
                     }
             </th>
             <th></th>
