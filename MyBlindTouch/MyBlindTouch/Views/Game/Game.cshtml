@@ -12,9 +12,9 @@
         <tr>
                 <th>
                     @{
-                        for(var i=0;i<3;i++)
+                        foreach (var item in Model.LevelList)
                         {
-                         <p>@Model.LevelList[i]</p> //null
+                         <p>@item</p>  
                         }
 
                         foreach (var item in Model.QuizStrCopy)

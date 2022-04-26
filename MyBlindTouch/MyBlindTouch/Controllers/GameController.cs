@@ -39,14 +39,25 @@ namespace MyBlindTouch.Controllers
         }
         
         [HttpPost]
-        public async Task<IActionResult> Game()
+        public async Task<IActionResult> Game(GameModel model)
         {
             ViewBag.gametime = HttpContext.Session.GetInt32("gametime");//データ変更 ログイン画面は変更、遷移先は取得
             ViewBag.questiontime = HttpContext.Session.GetInt32("questiontime");//データ変更 ログイン画面は変更、遷移先は取得
             ViewBag.gamesound = HttpContext.Session.GetInt32("gamesound");//データ変更 ログイン画面は変更、遷移先は取得
             ViewBag.soundonoff = HttpContext.Session.GetString("soundonoff");//データ変更 ログイン画面は変更、遷移先は取得
-            GameModel model = new GameModel();
-            
+            if(model.ElementLevel)
+            {
+                model.LevelList.Add("Element");
+            }
+            if (model.MiddleLevel)
+            {
+                model.LevelList.Add("Middle");
+            }
+            if (model.TopLevel)
+            {
+                model.LevelList.Add("Top");
+            }
+           
             var alldata = await _copycontext.QuizModel.ToListAsync();//全データ読み込み
            // var getdata = await _copycontext.QuizModel.Where(x => x.Id >= 0).ToListAsync();//LINQで特定のデータを読み込み
             foreach (var item in alldata)
