@@ -3,21 +3,29 @@
 *@
 @model MyBlindTouch.Models.GameModel
 <div class="banner">
-    <h2 id="gametimeid">gametime=@ViewBag.gametime</h2>
-    <h2>questiontime=@ViewBag.questiontime</h2>
-    <h2>onoff=@ViewBag.soundonoff</h2>
-    <h2>gamesound=@ViewBag.gamesound</h2>
+    
     <table class="table">
     <thead>
         <tr>
                 <th>
                     @{
+                        /*
+                        <h2 id="gametimeid">gametime=@ViewBag.gametime</h2>
+                        <h2>questiontime=@ViewBag.questiontime</h2>
+                        <h2>onoff=@ViewBag.soundonoff</h2>
+                        <h2>gamesound=@ViewBag.gamesound</h2>
                         foreach (var item in Model.LevelList)
                         {
                          <p>@item</p>  
-                        }
-
+                        }//値が渡されていることが確認できた
+                        */
+                       /*
                         foreach (var item in Model.QuizStrCopy)
+                        {
+                        <h3>@item</h3>
+                        }*///値が渡されていることが確認できた
+                        //linqで指定されたステージの文字列のみ参照
+                         foreach (var item in Model.QuizStrCopy)
                         {
                         <h3>@item</h3>
                         }

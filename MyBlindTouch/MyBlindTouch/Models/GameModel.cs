@@ -5,12 +5,21 @@ namespace MyBlindTouch.Models
     public class GameModel
     {
         public List<string>? LevelList { get; set; } = new List<string>();
-        public List<string> LevelListName { get; set; } = new List<string> { "初級", "中級", "上級" };
+        public List<QuizStrCopyClass> QuizModelCopy { get; set; } = new List<QuizStrCopyClass>();//QuizModelをコピー    
         public List<string>? QuizStrCopy { get; set; } = new List<string>();//QuizModelのQuizStrを格納する
-        public bool Level { get; set; }
+        public List<string>? LevelCopy { get; set; } = new List<string>();//QuizModelのLevelを格納する
+        public List<int>? IdCopy { get; set; } = new List<int>();//QuizModelのIdを格納する
         public bool ElementLevel { get; set; }
         public bool MiddleLevel { get; set; }
         public bool TopLevel { get; set; }
 
     }
+
+    public class QuizStrCopyClass
+    {
+        public List<string>? QuizStrCopy { get; set; } = new List<string>();//QuizModelのQuizStrを格納する
+        public List<string>? LevelCopy { get; set; } = new List<string>();//QuizModelのLevelを格納する
+        public List<int>? IdCopy { get; set; } = new List<int>();//QuizModelのIdを格納する
+    }
+
 }

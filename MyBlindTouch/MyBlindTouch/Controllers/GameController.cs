@@ -23,18 +23,8 @@ namespace MyBlindTouch.Controllers
         //非同期メソッド
         public async Task<IActionResult> Index()
         {
-            ViewBag.gametime = HttpContext.Session.GetInt32("gametime");//データ変更 ログイン画面は変更、遷移先は取得
-            ViewBag.questiontime = HttpContext.Session.GetInt32("questiontime");//データ変更 ログイン画面は変更、遷移先は取得
-            ViewBag.gamesound = HttpContext.Session.GetInt32("gamesound");//データ変更 ログイン画面は変更、遷移先は取得
-            ViewBag.soundonoff = HttpContext.Session.GetString("soundonoff");//データ変更 ログイン画面は変更、遷移先は取得
-            GameModel model = new GameModel();
-            var alldata = await _copycontext.QuizModel.ToListAsync();//全データ読み込み
-            var getdata = await _copycontext.QuizModel.Where(x => x.Id >= 0).ToListAsync();//LINQで特定のデータを読み込み
-            foreach (var item in getdata)
-            {
-                model.QuizStrCopy.Add(item.QuizStr);
-            }
             
+            GameModel model = new GameModel();
             return View(model);//modelごと送って送り先でプロパティから参照
         }
         
@@ -45,6 +35,7 @@ namespace MyBlindTouch.Controllers
             ViewBag.questiontime = HttpContext.Session.GetInt32("questiontime");//データ変更 ログイン画面は変更、遷移先は取得
             ViewBag.gamesound = HttpContext.Session.GetInt32("gamesound");//データ変更 ログイン画面は変更、遷移先は取得
             ViewBag.soundonoff = HttpContext.Session.GetString("soundonoff");//データ変更 ログイン画面は変更、遷移先は取得
+            /*
             if(model.ElementLevel)
             {
                 model.LevelList.Add("Element");
@@ -56,13 +47,17 @@ namespace MyBlindTouch.Controllers
             if (model.TopLevel)
             {
                 model.LevelList.Add("Top");
-            }
-           
+            }//値が渡されていることが確認できた
+           */
             var alldata = await _copycontext.QuizModel.ToListAsync();//全データ読み込み
            // var getdata = await _copycontext.QuizModel.Where(x => x.Id >= 0).ToListAsync();//LINQで特定のデータを読み込み
+           // QuizStrCopyClass quizstrcopyclass=new QuizStrCopyClass();
             foreach (var item in alldata)
             {
                 model.QuizStrCopy.Add(item.QuizStr);
+                model.LevelCopy.Add(item.Level);
+                model.IdCopy.Add(item.Id);
+                //各々格納してgame.cshtmlでグループ化?
             }
 
             return View(model);//modelごと送って送り先でプロパティから参照
