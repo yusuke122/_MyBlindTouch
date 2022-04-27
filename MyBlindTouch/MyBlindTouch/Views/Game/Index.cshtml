@@ -8,13 +8,13 @@
 <div class="banner">
     <form method="post" asp-controller="Game" asp-action="Game">
         <h2>出題範囲</h2></br>
-            @Html.CheckBoxFor(expression: model => model.ElementLevel, new{tabindex=1})
+            @Html.CheckBoxFor(expression: model => model.LevelList[0], new{tabindex=1})
             <input type="hidden"name="ElementLevel"value="false"/>
             <label for="ElementLevel">初級</label>
-            @Html.CheckBoxFor(expression: model => model.MiddleLevel, new{tabindex=2})
+            @Html.CheckBoxFor(expression: model => model.LevelList[1], new{tabindex=2})
             <input type="hidden"name="MiddleLevel"value="false"/>
             <label for="ElementLevel">中級</label>
-            @Html.CheckBoxFor(expression: model => model.TopLevel, new{tabindex=3})
+            @Html.CheckBoxFor(expression: model => model.LevelList[2], new{tabindex=3})
             <input type="hidden"name="TopLevel"value="false"/>
             <label for="TopLevel">上級</label>
         </br>
