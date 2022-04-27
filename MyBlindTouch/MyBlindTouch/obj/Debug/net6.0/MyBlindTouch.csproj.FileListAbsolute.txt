@@ -266,3 +266,9 @@ C:\Users\youfu\programming\MyBlindTouch\MyBlindTouch\MyBlindTouch\bin\Debug\net6
 C:\Users\youfu\programming\MyBlindTouch\MyBlindTouch\MyBlindTouch\bin\Debug\net6.0\runtimes\win-arm\lib\net6.0\dotnet-aspnet-codegenerator-design.exe
 C:\Users\youfu\programming\MyBlindTouch\MyBlindTouch\MyBlindTouch\bin\Debug\net6.0\runtimes\win-arm64\lib\net6.0\dotnet-aspnet-codegenerator-design.exe
 C:\Users\youfu\programming\MyBlindTouch\MyBlindTouch\MyBlindTouch\obj\Debug\net6.0\MyBlindTouch.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\youfu\programming\MyBlindTouch\MyBlindTouch\MyBlindTouch\bin\Debug\net6.0\QuizStrOutputData.json
+C:\Users\youfu\programming\MyBlindTouch\MyBlindTouch\MyBlindTouch\bin\Debug\net6.0\.QuizStrOutputData.json
+C:\Users\youfu\programming\MyBlindTouch\MyBlindTouch\MyBlindTouch\bin\Debug\net6.0\.GameTimeData.json
+C:\Users\youfu\programming\MyBlindTouch\MyBlindTouch\MyBlindTouch\bin\Debug\net6.0\.GameSoundData.json
+C:\Users\youfu\programming\MyBlindTouch\MyBlindTouch\MyBlindTouch\bin\Debug\net6.0\.QuestionTimeData.json
+C:\Users\youfu\programming\MyBlindTouch\MyBlindTouch\MyBlindTouch\bin\Debug\net6.0\.SoundOnOffData.json

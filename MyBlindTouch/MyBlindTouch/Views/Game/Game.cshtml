@@ -2,46 +2,65 @@
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @model MyBlindTouch.Models.GameModel
-<div class="GameTimeArea">
-    残り時間：<div id="gametime">@ViewBag.gametime</div>
+@using Newtonsoft.Json;
+@using System.IO;  
+
+@{
+    for (int i=0;i<Model.QuizStrCopy.Count;i++)//全問題でfor文を回す
+    {
+        //LevelList[0]==true:初級が選択されている
+        if(Model.LevelCopy[i]=="初級" && Model.LevelList[0]==true)
+        {
+            Model.QuizStrOutputList.Add(Model.QuizStrCopy[i]);
+        }
+        //LevelList[1]==true:中級が選択されている
+        else if(Model.LevelCopy[i]=="中級" && Model.LevelList[1]==true)
+        {
+            Model.QuizStrOutputList.Add(Model.QuizStrCopy[i]);
+        }
+        //LevelList[2]==true:上級が選択されている
+        else if(Model.LevelCopy[i]=="上級" && Model.LevelList[2]==true)
+        {
+            Model.QuizStrOutputList.Add(Model.QuizStrCopy[i]);
+        }
+    }
+
+    //OutputListをjsonにシリアライズしてjsに渡す
+    var QuizStrOutputJsonData = JsonConvert.SerializeObject(Model.QuizStrOutputList);
+    //settingsで設定したゲーム時間、解答時間、音量、出力の有無をシリアライズ
+    var GameTimeJsonData=JsonConvert.SerializeObject(ViewBag.gametime);
+    var QuestionTimeJsonData=JsonConvert.SerializeObject(ViewBag.questiontime);
+    var SoundOnOffJsonData=JsonConvert.SerializeObject(ViewBag.soundonoff);
+    var GameSoundJsonData=JsonConvert.SerializeObject(ViewBag.gamesound);
+
+     // シリアライズ済みデータをファイルに書き込み
+    File.WriteAllText(@".QuizStrOutputData.json",QuizStrOutputJsonData );
+    File.WriteAllText(@".GameTimeData.json",GameTimeJsonData );
+    File.WriteAllText(@".QuestionTimeData.json",QuestionTimeJsonData );
+    File.WriteAllText(@".SoundOnOffData.json",SoundOnOffJsonData );
+    File.WriteAllText(@".GameSoundData.json",GameSoundJsonData );
+
+        
+}
+<div class="StartCountArea banner open-modal">
+    <div id="sec"></div>
 </div>
-<div class="banner">
-    
-    <table class="table">
-    <thead>
-        <tr>
-                <th>
-                    @{
-                        /*
-                        <h2 id="gametimeid">gametime=@ViewBag.gametime</h2>
-                        <h2>questiontime=@ViewBag.questiontime</h2>
-                        <h2>onoff=@ViewBag.soundonoff</h2>
-                        <h2>gamesound=@ViewBag.gamesound</h2>
-                        */
-                        for (int i=0;i<Model.QuizStrCopy.Count;i++)//全問題でfor文を回す
-                        {
-                            //LevelList[0]==true:初級が選択されている
-                            if(Model.LevelCopy[i]=="初級" && Model.LevelList[0]==true)
-                            {
-                                Model.QuizStrOutputList.Add(Model.QuizStrCopy[i]);
-                            }
-                            //LevelList[1]==true:中級が選択されている
-                            else if(Model.LevelCopy[i]=="中級" && Model.LevelList[1]==true)
-                            {
-                                Model.QuizStrOutputList.Add(Model.QuizStrCopy[i]);
-                            }
-                            //LevelList[2]==true:上級が選択されている
-                            else if(Model.LevelCopy[i]=="上級" && Model.LevelList[2]==true)
-                            {
-                                Model.QuizStrOutputList.Add(Model.QuizStrCopy[i]);
-                            }
-                        }
-                    }
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    </table>
-  <input type="button"value="一時停止"class="btn btn-defaultLayout">
-  <a asp-controller="Home" asp-action="Index"class="btn btn-defaultLayout">戻る</a>
+<div class="GameTimeArea modal-overlay">
+    残り時間：<div id="gametime"></div>
 </div>
+<div class="banner modal-overlay">
+</div>
+<script>
+/*このページが読まれたときに発動*/ 
+window.onload=()=>{
+    //最初のカウントダウン
+    FirstCountDown();
+    //Jsonを読み込む
+    QuizStr=require('./QuizStrOutputData.json');
+    GameTime=require('./GameTimeData.json');
+    AnswerTime=require('./QuestionTimeData.json');
+    SoundVolume=require('./GameSoundData.json');
+    GameSound=require('./SoundOnOffData.json');
+
+}
+</script>

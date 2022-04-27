@@ -1,0 +1,11 @@
+﻿/*エリアはclass 要素はid*/
+.GameTimeArea {
+    background-color: white;
+    border-radius: var(--radius);
+    box-shadow: var(--light-shadow);
+    text-align: center;
+    width: 15vw;
+    padding: 1rem 0; /*top&bottom  right&left*/
+    max-width: var(--fixed-width);
+    visibility: hidden;
+}

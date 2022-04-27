@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "XEweVDJYSl8PKCyg7ojMnwSIWnFyQEu7hh5rxYlenew=",
+  "Hash": "uaSRoKSBrOG76lFnkucJLiW5XlKiiDQDdU5dKhZ6Wrs=",
   "Source": "MyBlindTouch",
   "BasePath": "_content/MyBlindTouch",
   "Mode": "Default",
@@ -49,6 +49,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\youfu\\programming\\MyBlindTouch\\MyBlindTouch\\MyBlindTouch\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\MyBlindTouch.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\youfu\\programming\\MyBlindTouch\\MyBlindTouch\\MyBlindTouch\\wwwroot\\css\\game.css",
+      "SourceId": "MyBlindTouch",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\youfu\\programming\\MyBlindTouch\\MyBlindTouch\\MyBlindTouch\\wwwroot\\",
+      "BasePath": "_content/MyBlindTouch",
+      "RelativePath": "css/game.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\game.css"
+    },
+    {
+      "Identity": "C:\\Users\\youfu\\programming\\MyBlindTouch\\MyBlindTouch\\MyBlindTouch\\wwwroot\\css\\modal.css",
+      "SourceId": "MyBlindTouch",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\youfu\\programming\\MyBlindTouch\\MyBlindTouch\\MyBlindTouch\\wwwroot\\",
+      "BasePath": "_content/MyBlindTouch",
+      "RelativePath": "css/modal.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\modal.css"
     },
     {
       "Identity": "C:\\Users\\youfu\\programming\\MyBlindTouch\\MyBlindTouch\\MyBlindTouch\\wwwroot\\css\\site.css",
@@ -100,6 +134,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\youfu\\programming\\MyBlindTouch\\MyBlindTouch\\MyBlindTouch\\wwwroot\\js\\game.js",
+      "SourceId": "MyBlindTouch",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\youfu\\programming\\MyBlindTouch\\MyBlindTouch\\MyBlindTouch\\wwwroot\\",
+      "BasePath": "_content/MyBlindTouch",
+      "RelativePath": "js/game.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\game.js"
     },
     {
       "Identity": "C:\\Users\\youfu\\programming\\MyBlindTouch\\MyBlindTouch\\MyBlindTouch\\wwwroot\\js\\site.js",
