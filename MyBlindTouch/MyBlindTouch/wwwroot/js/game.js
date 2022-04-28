@@ -8,13 +8,16 @@ let SoundVolume;
 let GameSound;
 /*id取得*/
 const secid = document.getElementById("sec");
+secid.innerText = String(countsec);
+
 /*メソッド*/
 //最初のカウントダウン
 function FirstCountDown() {
-    FirstCountTimer = setInterval(FirstCount, 1000);
+    alert("firstcountdown");
+    //FirstCountTimer = setInterval(FirstCount, 1000);
 }
 function FirstCount() {
-    secid.innerText = String(countsec);
+    alert(countsec);
     countsec--;
     if (countsec < 0) {
         secid.innerText = "";

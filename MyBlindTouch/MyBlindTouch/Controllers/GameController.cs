@@ -43,6 +43,7 @@ namespace MyBlindTouch.Controllers
             {
                 model.QuizStrCopy.Add(item.QuizStr);
                 model.LevelCopy.Add(item.Level);
+                model.IdCopy.Add(item.Id);
             }
 
             return View(model);//modelごと送って送り先でプロパティから参照

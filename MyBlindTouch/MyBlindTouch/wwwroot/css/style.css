@@ -139,6 +139,9 @@ p {
         line-height: 1;
     }
 }
+.form-group{
+    text-align:center;
+}
 /*  global classes */
 
 .btn {

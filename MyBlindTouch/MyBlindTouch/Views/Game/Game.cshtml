@@ -24,24 +24,19 @@
             Model.QuizStrOutputList.Add(Model.QuizStrCopy[i]);
         }
     }
-
-    //OutputListをjsonにシリアライズしてjsに渡す
-    var QuizStrOutputJsonData = JsonConvert.SerializeObject(Model.QuizStrOutputList);
-    //settingsで設定したゲーム時間、解答時間、音量、出力の有無をシリアライズ
-    var GameTimeJsonData=JsonConvert.SerializeObject(ViewBag.gametime);
-    var QuestionTimeJsonData=JsonConvert.SerializeObject(ViewBag.questiontime);
-    var SoundOnOffJsonData=JsonConvert.SerializeObject(ViewBag.soundonoff);
-    var GameSoundJsonData=JsonConvert.SerializeObject(ViewBag.gamesound);
+    
+    Model.GameTime = ViewBag.gametime;
+    Model.QuestionTime = ViewBag.questiontime;
+    Model.GameSound = ViewBag.soundonoff;
+    Model.SoundVolume = ViewBag.gamesound;
+    
+    //GameModelをjsonにシリアライズしてjsに渡す
+    var JsonData = JsonConvert.SerializeObject(Model);  
 
      // シリアライズ済みデータをファイルに書き込み
-    File.WriteAllText(@".QuizStrOutputData.json",QuizStrOutputJsonData );
-    File.WriteAllText(@".GameTimeData.json",GameTimeJsonData );
-    File.WriteAllText(@".QuestionTimeData.json",QuestionTimeJsonData );
-    File.WriteAllText(@".SoundOnOffData.json",SoundOnOffJsonData );
-    File.WriteAllText(@".GameSoundData.json",GameSoundJsonData );
-
-        
+    File.WriteAllText(@".SettingsData.json",JsonData );
 }
+
 <div class="StartCountArea banner open-modal">
     <div id="sec"></div>
 </div>
@@ -51,16 +46,6 @@
 <div class="banner modal-overlay">
 </div>
 <script>
-/*このページが読まれたときに発動*/ 
-window.onload=()=>{
-    //最初のカウントダウン
-    FirstCountDown();
-    //Jsonを読み込む
-    QuizStr=require('./QuizStrOutputData.json');
-    GameTime=require('./GameTimeData.json');
-    AnswerTime=require('./QuestionTimeData.json');
-    SoundVolume=require('./GameSoundData.json');
-    GameSound=require('./SoundOnOffData.json');
+/*このページが読まれたときに発動*/
 
-}
 </script>
