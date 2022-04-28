@@ -34,18 +34,16 @@
     var JsonData = JsonConvert.SerializeObject(Model);  
 
      // シリアライズ済みデータをファイルに書き込み
-    File.WriteAllText(@".SettingsData.json",JsonData );
+    File.WriteAllText(@"SettingsData.json",JsonData );
 }
 
 <div class="StartCountArea banner open-modal">
-    <div id="sec"></div>
+    <div id="sec">sec</div>
+    <button class="btn btn-defaultLayout"onclick="time()">click</button>
 </div>
 <div class="GameTimeArea modal-overlay">
     残り時間：<div id="gametime"></div>
 </div>
 <div class="banner modal-overlay">
 </div>
-<script>
-/*このページが読まれたときに発動*/
-
-</script>
+<script src="~/js/game.js" asp-append-version="true"></script>    

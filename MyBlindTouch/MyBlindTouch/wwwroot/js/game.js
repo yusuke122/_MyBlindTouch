@@ -26,3 +26,6 @@ function FirstCount() {
     }
 }
 //最初のカウントが終わったら問題と入力フォームを表示
+function time() {
+    alert("alert");
+}
