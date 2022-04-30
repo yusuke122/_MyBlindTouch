@@ -37,12 +37,18 @@
     File.WriteAllText(@"SettingsData.json",JsonData );
 }
 
-<div class="StartCountArea banner open-modal">
-    <div id="sec">sec</div>
-    <button class="btn btn-defaultLayout"onclick="time()">click</button>
+<div class="startcount-modal open-modal">
+    <div id="sec"></div>
 </div>
-<div class="GameTimeArea modal-overlay">
-    残り時間：<div id="gametime"></div>
+<div class="GameTimeArea">
+    残り時間：
+    </div>
+<div class="GamePlayArea banner">
+    
+    game
 </div>
-<div class="banner modal-overlay">
-</div>
+<script>
+window.onload=()=>{
+    FirstCountDown();
+}
+</script>

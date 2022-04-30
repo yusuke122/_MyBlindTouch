@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "7fP4UbLOc9LSXmyqfxLZaHbwbVTIgPpWrzAwy1ugsIc=",
+  "Hash": "4l16g1/K7sAZWumROw5w2Vf0rZgnwv04L3mD9EJTXPA=",
   "Source": "MyBlindTouch",
   "BasePath": "_content/MyBlindTouch",
   "Mode": "Default",
@@ -151,23 +151,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\game.js"
-    },
-    {
-      "Identity": "C:\\Users\\youfu\\programming\\MyBlindTouch\\MyBlindTouch\\MyBlindTouch\\wwwroot\\js\\site.js",
-      "SourceId": "MyBlindTouch",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\youfu\\programming\\MyBlindTouch\\MyBlindTouch\\MyBlindTouch\\wwwroot\\",
-      "BasePath": "_content/MyBlindTouch",
-      "RelativePath": "js/site.js",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\site.js"
     },
     {
       "Identity": "C:\\Users\\youfu\\programming\\MyBlindTouch\\MyBlindTouch\\MyBlindTouch\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
