@@ -24,31 +24,74 @@
             Model.QuizStrOutputList.Add(Model.QuizStrCopy[i]);
         }
     }
-    
+    /*
     Model.GameTime = ViewBag.gametime;
     Model.QuestionTime = ViewBag.questiontime;
     Model.GameSound = ViewBag.soundonoff;
     Model.SoundVolume = ViewBag.gamesound;
-    
+    */
+    Model.GameTime = 30;
+    Model.QuestionTime = 5;
+    Model.GameSound = "soundoff";
+    Model.SoundVolume = 50;
     //GameModelをjsonにシリアライズしてjsに渡す
     var JsonData = JsonConvert.SerializeObject(Model);  
 
      // シリアライズ済みデータをファイルに書き込み
     File.WriteAllText(@"SettingsData.json",JsonData );
 }
-
-<div class="startcount-modal open-modal">
+<!--html-->
+<!--開始時のカウント表示-->
+<div class="startcount-modal">
     <div id="sec"></div>
 </div>
-<div class="GameTimeArea">
-    残り時間：
-    </div>
-<div class="GamePlayArea banner">
-    
-    game
+<!--メインプレイ画面-->
+<div class="gametime-modal">
+    残り時間：<div id="gametime"></div>
 </div>
+<div class="gameplay-modal">
+    <input type="button"value="focus"class="btn btn-defaultLayout"id="focus-button">
+    <div class="QuizStrArea">
+        <div id="question"></div>
+    </div>
+    <div class="AnswerFormArea">
+        <input type="text"placeholder="入力して下さい"id="answer">
+    </div>
+    <input type="button"value="一時停止"class="btn btn-defaultLayout"id="pause-button">
+</div>
+<!--true modal -->
+<div class="true-modal">
+    <div id="true">〇</div>
+</div>
+<!--false modal -->
+<div class="false-modal">
+    <div id="false">✕</div>
+</div>
+<!--一時停止画面-->
+<div class="pause-modal">
+    <div id="pause">PAUSE</div>
+    <input type="button"value="続ける"class="btn btn-defaultLayout"id="pause-replay-button">
+    <a asp-controller="Home" asp-action="Index"class="btn btn-defaultLayout">ゲームの終了</a>
+</div>
+<!--ゲーム終了時の画面-->
+<div class="gameover-modal">
+    <div id="gameover">GAME OVER</div>
+</div>
+<!--解答の結果を表示-->
+<div class="gameresult-modal">
+    <input type="button"value="詳細を見る"class="btn btn-defaultLayout"id="gameresult-detail-button">
+    <a asp-controller="Home" asp-action="Index"class="btn btn-defaultLayout">ゲームの終了</a>
+</div>
+<!--解答の詳細を表示-->
+<div class="gameresult-detail-modal">
+    <div id="gameresult-detail"></div>
+    <input type="button"value="戻る"class="btn btn-defaultLayout"id="detail-to-result-button">
+    <a asp-controller="Home" asp-action="Index"class="btn btn-defaultLayout">ゲームの終了</a>
+</div>
+<!--js-->
 <script>
 window.onload=()=>{
-    FirstCountDown();
+  //const QuizStr=require('./SettingsData.json');//エラー
+  FirstCountDown();
 }
 </script>

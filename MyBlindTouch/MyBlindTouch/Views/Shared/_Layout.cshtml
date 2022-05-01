@@ -18,7 +18,7 @@
 <body>
     <div id="content">
          <!--audio--->
-     <div id="bgmAudio"><audio autoplay mute loop><source src="~/sound/かえるのピアノ.mp3" type="audio/mp3"></audio></div>
+     <div id="bgmAudio"><audio mute loop><source src="~/sound/かえるのピアノ.mp3" type="audio/mp3"></audio></div>
      <div id="trueAudio"><audio ><source src="~/sound/クイズ正解2.mp3"type="audio/mp3"></audio></div>
      <div id="falseAudio"><audio><source src="~/sound/クイズ不正解2.mp3"type="audio/mp3" ></audio></div>
      <div id="countdownAudio"><audio><source src="~/sound/stopwatch1.mp3"type="audio/mp3" ></audio></div>
@@ -52,7 +52,7 @@
     </div>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/game.js" asp-append-version="true"></script>    
+    <script src="~/js/game.js" asp-append-version="true" charset="shift_jis"></script>    
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

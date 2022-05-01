@@ -3,13 +3,6 @@
 Modal
 ===============
 */
-.content {
-    min-height: 100vh;
-    display: grid;
-    /*
-    padding:0 0 0 4rem;/*top right bottom left*/
-    place-items: center;
-}
 
 .banner {
     background: var(--clr-white);
@@ -34,21 +27,21 @@ Modal
     }
 
 .modal-overlay {
-    /*position:fixed*/
+    position:fixed;
     width: 90vw;
     max-width: var(--fixed-width);
     background: rgba(73, 166, 233, 0.5);
-    /*display: grid;*/
+    display: grid;
     text-align: center;
     place-items: center;
     transition: var(--transition);
     visibility: hidden;
-    z-index: 1;
+    z-index: -10;
 }
 /* OPEN/CLOSE MODAL */
 .open-modal {
-    visibility: visible;
-    z-index: 10;
+    visibility: visible !important;
+    z-index:10;
 }
 
 .modal-container {
@@ -61,19 +54,6 @@ Modal
     display: grid;
     place-items: center;
     position: relative;
-}
-
-.startcount-modal {
-    width: 60vw;
-    height: 60vh;
-    max-width: var(--fixed-width);
-    background-color: transparent;
-    text-align: center;
-    place-items: center;
-    transition: var(--transition);
-    display: grid;
-    position: absolute;
-    z-index:2;
 }
 
 ksofGIJs3458ehg
@@ -93,4 +73,138 @@ ksofGIJs3458ehg
     color: var(--clr-red-light);
     transform: scale(1.3);
 }
+
+/*other modal*/
+.startcount-modal {
+    width: 60vw;
+    height: 60vh;
+    max-width: var(--fixed-width);
+    background-color: transparent;
+    text-align: center;
+    place-items: center;
+    transition: var(--transition);
+    display: grid;
+    visibility: visible;
+    position: absolute;
+}
+
+.gametime-modal {
+    border-radius: var(--radius);
+    box-shadow: var(--light-shadow);
+    text-align: center;
+    padding: 1rem 0; /*top&bottom  right&left*/
+    max-width: var(--fixed-width);
+    background: var(--clr-white);
+    top: 10px;
+    width: 20vw;
+    height: 10vh;
+    visibility: hidden;
+    display: grid;
+    position: fixed;
+    z-index: 10;
+}
+
+.gameplay-modal {
+    border-radius: var(--radius);
+    text-align: center;
+    max-width: var(--fixed-width);
+    place-items: center;
+    transition: var(--transition);
+    background: var(--clr-white);
+    width: 120vw;
+    height: 60vh;
+    visibility: hidden;
+    position: fixed;
+    display: grid;
+    z-index: 10;
+}
+.true-modal {
+    border-radius: var(--radius);
+    text-align: center;
+    max-width: var(--fixed-width);
+    place-items: center;
+    transition: var(--transition);
+    background: transparent;
+    width: 60vw;
+    height: 60vh;
+    visibility: hidden;
+    position: fixed;
+    display: grid;
+    z-index: 10;
+}
+
+.false-modal {
+    border-radius: var(--radius);
+    text-align: center;
+    max-width: var(--fixed-width);
+    place-items: center;
+    transition: var(--transition);
+    background: transparent;
+    width: 60vw;
+    height: 60vh;
+    visibility: hidden;
+    position: fixed;
+    display: grid;
+    z-index: 10;
+}
+.pause-modal {
+    border-radius: var(--radius);
+    text-align: center;
+    max-width: var(--fixed-width);
+    place-items: center;
+    transition: var(--transition);
+    background: var(--clr-white);
+    width: 90vw;
+    height: 40vh;
+    visibility: hidden;
+    position: fixed;
+    display: grid;
+    z-index: 10;
+}
+
+.gameover-modal {
+    border-radius: var(--radius);
+    text-align: center;
+    max-width: var(--fixed-width);
+    place-items: center;
+    transition: var(--transition);
+    background: var(--clr-white);
+    width: 120vw;
+    height: 60vh;
+    visibility: hidden;
+    position: fixed;
+    display: grid;
+    z-index: 10;
+}
+
+.gameresult-modal {
+    border-radius: var(--radius);
+    text-align: center;
+    max-width: var(--fixed-width);
+    place-items: center;
+    transition: var(--transition);
+    background: var(--clr-white);
+    width: 90vw;
+    height: 60vh;
+    visibility: hidden;
+    position: fixed;
+    display: grid;
+    z-index: 10;
+}
+
+.gameresult-detail-modal {
+    border-radius: var(--radius);
+    text-align: center;
+    max-width: var(--fixed-width);
+    place-items: center;
+    transition: var(--transition);
+    background: var(--clr-white);
+    width: 90vw;
+    height: 60vh;
+    visibility: hidden;
+    position: fixed;
+    display: grid;
+    z-index: 10;
+}
+
 
