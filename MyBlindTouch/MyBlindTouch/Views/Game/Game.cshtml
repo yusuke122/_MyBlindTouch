@@ -30,10 +30,12 @@
     Model.GameSound = ViewBag.soundonoff;
     Model.SoundVolume = ViewBag.gamesound;
     */
+   
     Model.GameTime = 30;
     Model.QuestionTime = 5;
     Model.GameSound = "soundoff";
     Model.SoundVolume = 50;
+    
     //GameModelをjsonにシリアライズしてjsに渡す
     var JsonData = JsonConvert.SerializeObject(Model);  
      // シリアライズ済みデータをファイルに書き込み
@@ -90,6 +92,8 @@
 <!--js-->
 <script>
 window.onload=()=>{
+  //音を出すためにロード
+
   //ajax通信でjsonを読み取り
   $.ajax({
     // 読み込みの設定
@@ -117,7 +121,7 @@ window.onload=()=>{
         console.log("errorThrown : " + errorThrown.message);
     }
 );
+
   FirstCountDown();
 }
 </script>
-<!--s67g6eagre4gSgewg-->

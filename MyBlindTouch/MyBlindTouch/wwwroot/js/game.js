@@ -6,7 +6,7 @@ let LastGameTime = GameTime;
 let AnswerTime = 5;
 let AnswerTimeMs = AnswerTime * 1000;
 let SoundVolume=50;
-let GameSound = "soundoff";
+let GameSound = "soundon";
 let QuizStrOutputList;
 /*id取得*/
 const secid = document.getElementById("sec");//ゲーム開始時のカウントダウンを表示
