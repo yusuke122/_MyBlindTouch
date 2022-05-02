@@ -36,7 +36,6 @@
     Model.SoundVolume = 50;
     //GameModelをjsonにシリアライズしてjsに渡す
     var JsonData = JsonConvert.SerializeObject(Model);  
-
      // シリアライズ済みデータをファイルに書き込み
     File.WriteAllText(@"SettingsData.json",JsonData );
 }
@@ -91,7 +90,28 @@
 <!--js-->
 <script>
 window.onload=()=>{
-  //const QuizStr=require('./SettingsData.json');//エラー
+  //ajax通信でjsonを読み取り
+  $.ajax({
+    // 読み込みの設定
+    type: "GET",
+    url: "./SettingsData.json", // ファイルパス（相対パス）
+    dataType: "json", // ファイル形式
+    async: false // 非同期通信フラグ
+}).then(
+    function (json) {
+        // 読み込み成功時の処理
+        console.log("読み込みに成功しました");
+        console.log(json)
+        json.forEach(function (data) {
+            console.log(data)
+        });
+    },
+    function () {
+        // 読み込み失敗時の処理
+        console.log("読み込みに失敗しました");
+    }
+);
   FirstCountDown();
 }
 </script>
+<!--s67g6eagre4gSgewg-->

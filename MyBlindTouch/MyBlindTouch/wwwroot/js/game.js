@@ -1,12 +1,13 @@
 /*デフォルト値*/
-var countsec = 3;
+let countsec = 3;
 let FirstCountTimer, AnswerTimeTimer, GameTimeTimer;
 let GameTime = 30;
 let LastGameTime = GameTime;
 let AnswerTime = 5;
 let AnswerTimeMs = AnswerTime * 1000;
 let SoundVolume=50;
-let GameSound="soundoff";
+let GameSound = "soundoff";
+let QuizStrOutputList;
 /*id取得*/
 const secid = document.getElementById("sec");//ゲーム開始時のカウントダウンを表示
 const gametime = document.getElementById("gametime");//ゲームの残り時間を表示
