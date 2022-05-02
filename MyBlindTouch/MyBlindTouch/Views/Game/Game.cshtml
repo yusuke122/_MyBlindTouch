@@ -94,7 +94,7 @@ window.onload=()=>{
   $.ajax({
     // 読み込みの設定
     type: "GET",
-    url: "./SettingsData.json", // ファイルパス（相対パス）
+    url: "SettingsData.json", // ファイルパス（相対パス）
     dataType: "json", // ファイル形式
     async: false // 非同期通信フラグ
 }).then(
@@ -106,9 +106,15 @@ window.onload=()=>{
             console.log(data)
         });
     },
-    function () {
+    function (jqXHR, textStatus, errorThrown) {
         // 読み込み失敗時の処理
         console.log("読み込みに失敗しました");
+        // httpステータス
+        console.log("jqXHR : " + jqXHR.status);
+        // タイムアウト、パースエラー
+        console.log("textStatus : " + textStatus);
+        // エラーの詳細情報
+        console.log("errorThrown : " + errorThrown.message);
     }
 );
   FirstCountDown();
