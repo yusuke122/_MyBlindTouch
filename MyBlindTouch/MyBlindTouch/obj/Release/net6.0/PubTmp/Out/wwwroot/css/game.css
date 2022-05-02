@@ -1,0 +1,26 @@
+﻿/*エリアはclass 要素はid*/
+
+
+
+#sec{
+    color:white;
+    font-size:10rem;
+}
+#answer {
+    box-sizing: border-box; /*横幅の解釈をpadding, borderまでとする*/
+    
+}
+#true {
+    color: red;
+    font-size: 30rem;
+}
+#false {
+    color: blue;
+    font-size: 30rem;
+}
+#gameover {
+    font-size: 5rem;
+}
+#focus-button {
+    visibility:hidden;
+}
