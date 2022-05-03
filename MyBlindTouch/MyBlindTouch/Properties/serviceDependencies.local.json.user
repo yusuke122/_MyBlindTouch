@@ -2,8 +2,19 @@
   "dependencies": {
     "mssql1": {
       "restored": true,
-      "restoreTime": "2022-04-24T08:30:47.8562345Z"
+      "restoreTime": "2022-05-03T09:59:56.0773355Z"
     }
   },
-  "parameters": {}
+  "parameters": {
+    "mssql1.subscriptionId": {
+      "Name": "mssql1.subscriptionId",
+      "Type": "subscription",
+      "Value": "0b6a2f56-6566-44ce-afc4-fd2fbf8ebafe"
+    },
+    "mssql1.resourceGroupName": {
+      "Name": "mssql1.resourceGroupName",
+      "Type": "resourceGroup",
+      "Value": "MyBlindTouch_group"
+    }
+  }
 }

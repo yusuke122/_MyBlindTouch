@@ -1,9 +1,9 @@
 {
   "dependencies": {
     "mssql1": {
-      "secretStore": null,
-      "resourceId": null,
-      "type": "mssql.local",
+      "secretStore": "LocalSecretsFile",
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/myblindtouchserver/databases/MyBlindTouchDB",
+      "type": "mssql.azure",
       "connectionId": "ConnectionStrings:MyBlindTouchContext"
     }
   }
