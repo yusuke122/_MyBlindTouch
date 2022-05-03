@@ -52,6 +52,10 @@
               "target": "Package",
               "version": "[1.6.0, )"
             },
+            "BouncyCastle.NetCore": {
+              "target": "Package",
+              "version": "[1.8.10, )"
+            },
             "Microsoft.AspNetCore.Session": {
               "target": "Package",
               "version": "[2.2.0, )"

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "7GrRy+pl1Lsv8zm/maSJerhwqi3mM+U9mQxSHPjedR80UtGWu/2zqWdEwH4ZRE9L63Bd2fIfc9r9/FxHKglf2w==",
+  "dgSpecHash": "CvSiSZ4ET9UOUkyaOdubUmqUssTYUtJwuRQdXKe1CMPSY36RpKLBQYaL2S/RIYAQ61oB/HH9bzhEiLCpfNWhkQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\youfu\\programming\\MyBlindTouch\\MyBlindTouch\\MyBlindTouch\\MyBlindTouch.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,7 @@
     "C:\\Users\\youfu\\.nuget\\packages\\azure.extensions.aspnetcore.configuration.secrets\\1.2.2\\azure.extensions.aspnetcore.configuration.secrets.1.2.2.nupkg.sha512",
     "C:\\Users\\youfu\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
     "C:\\Users\\youfu\\.nuget\\packages\\azure.security.keyvault.secrets\\4.2.0\\azure.security.keyvault.secrets.4.2.0.nupkg.sha512",
+    "C:\\Users\\youfu\\.nuget\\packages\\bouncycastle.netcore\\1.8.10\\bouncycastle.netcore.1.8.10.nupkg.sha512",
     "C:\\Users\\youfu\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\youfu\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",
     "C:\\Users\\youfu\\.nuget\\packages\\messagepack.annotations\\2.1.152\\messagepack.annotations.2.1.152.nupkg.sha512",
