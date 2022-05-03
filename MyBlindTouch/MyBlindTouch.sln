@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.1.32319.34
+VisualStudioVersion = 17.1.32421.90
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyBlindTouch", "MyBlindTouch\MyBlindTouch.csproj", "{F6D883C1-BF5E-4EFF-BB0C-8A613FD9C875}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyBlindTouch", "MyBlindTouch\MyBlindTouch.csproj", "{8B22EABF-8C01-4DBE-BF7B-7BA4ECB9E175}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F6D883C1-BF5E-4EFF-BB0C-8A613FD9C875}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F6D883C1-BF5E-4EFF-BB0C-8A613FD9C875}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F6D883C1-BF5E-4EFF-BB0C-8A613FD9C875}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F6D883C1-BF5E-4EFF-BB0C-8A613FD9C875}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B22EABF-8C01-4DBE-BF7B-7BA4ECB9E175}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B22EABF-8C01-4DBE-BF7B-7BA4ECB9E175}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B22EABF-8C01-4DBE-BF7B-7BA4ECB9E175}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B22EABF-8C01-4DBE-BF7B-7BA4ECB9E175}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {3056BA9F-113D-4683-98BF-E0DCA146759D}
+		SolutionGuid = {03C13A47-E1FF-4B21-A49B-59113198C61F}
 	EndGlobalSection
 EndGlobal

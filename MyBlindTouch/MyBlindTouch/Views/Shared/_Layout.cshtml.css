@@ -1,145 +1,48 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
 
-*,
-*:before,
-*:after {
-    -webkit-box-sizing: inherit;
-    box-sizing: inherit;
+a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
 }
 
-* {
-    margin: 0px;
-    padding: 0px;
+a {
+  color: #0077cc;
 }
 
-html {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    font-family: monospace;
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
 }
 
-body {
-    font-family: 'Exo', sans-serif;
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
 }
 
-.area {
-    background: #00CCFF;
-    width: 100%;
-    height: 100vh;
-    position: absolute;
-    z-index: -1;
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
 }
 
-.circles {
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
 }
 
-    .circles li {
-        position: absolute;
-        z-index: -1;
-        display: block;
-        list-style: none;
-        width: 20px;
-        height: 20px;
-        background: rgba(255, 255, 255, 0.2);
-        animation: animate 25s linear infinite;
-        bottom: -150px;
-    }
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}
 
-        .circles li:nth-child(1) {
-            left: 25%;
-            width: 80px;
-            height: 80px;
-            animation-delay: 0s;
-        }
-
-
-        .circles li:nth-child(2) {
-            left: 10%;
-            width: 20px;
-            height: 20px;
-            animation-delay: 2s;
-            animation-duration: 12s;
-        }
-
-        .circles li:nth-child(3) {
-            left: 70%;
-            width: 20px;
-            height: 20px;
-            animation-delay: 4s;
-        }
-
-        .circles li:nth-child(4) {
-            left: 40%;
-            width: 60px;
-            height: 60px;
-            animation-delay: 0s;
-            animation-duration: 18s;
-        }
-
-        .circles li:nth-child(5) {
-            left: 65%;
-            width: 20px;
-            height: 20px;
-            animation-delay: 0s;
-        }
-
-        .circles li:nth-child(6) {
-            left: 75%;
-            width: 110px;
-            height: 110px;
-            animation-delay: 3s;
-        }
-
-        .circles li:nth-child(7) {
-            left: 35%;
-            width: 150px;
-            height: 150px;
-            animation-delay: 7s;
-        }
-
-        .circles li:nth-child(8) {
-            left: 50%;
-            width: 25px;
-            height: 25px;
-            animation-delay: 15s;
-            animation-duration: 45s;
-        }
-
-        .circles li:nth-child(9) {
-            left: 20%;
-            width: 15px;
-            height: 15px;
-            animation-delay: 2s;
-            animation-duration: 35s;
-        }
-
-        .circles li:nth-child(10) {
-            left: 85%;
-            width: 150px;
-            height: 150px;
-            animation-delay: 0s;
-            animation-duration: 11s;
-        }
-
-@keyframes animate {
-
-    0% {
-        transform: translateY(0) rotate(0deg);
-        opacity: 1;
-        border-radius: 0;
-    }
-
-    100% {
-        transform: translateY(-1000px) rotate(720deg);
-        opacity: 0;
-        border-radius: 50%;
-    }
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
 }

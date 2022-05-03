@@ -1,3 +1,16 @@
 {
-  "dependencies": {}
+  "dependencies": {
+    "mssql1": {
+      "secretStore": "AzureAppSettings",
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/myblindtouchserver/databases/myblindtouchDB",
+      "type": "mssql.azure",
+      "connectionId": "myblindtouchDB"
+    },
+    "secrets1": {
+      "secretStore": "AzureAppSettings",
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.KeyVault/vaults/MyBlindTouchvault",
+      "type": "secrets.keyVault",
+      "connectionId": "VaultUri"
+    }
+  }
 }
