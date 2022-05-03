@@ -18,9 +18,18 @@
     color: blue;
     font-size: 30rem;
 }
+#pause {
+    font-size: 5rem;
+}
 #gameover {
     font-size: 5rem;
 }
 #focus-button {
     visibility:hidden;
+}
+.button-area {
+    display: inline-block !important;
+}
+.gameresult-area{
+    font-size:2rem;
 }

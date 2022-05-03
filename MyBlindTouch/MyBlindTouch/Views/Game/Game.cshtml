@@ -71,8 +71,10 @@
 <!--一時停止画面-->
 <div class="pause-modal">
     <div id="pause">PAUSE</div>
-    <input type="button"value="続ける"class="btn btn-defaultLayout"id="pause-replay-button">
-    <a asp-controller="Home" asp-action="Index"class="btn btn-defaultLayout">ゲームの終了</a>
+    <div class="button-area">
+         <input type="button"value="続ける"class="btn btn-defaultLayout"id="pause-replay-button">
+         <a asp-controller="Home" asp-action="Index"class="btn btn-defaultLayout">ゲームの終了</a>
+    </div>
 </div>
 <!--ゲーム終了時の画面-->
 <div class="gameover-modal">
@@ -80,14 +82,45 @@
 </div>
 <!--解答の結果を表示-->
 <div class="gameresult-modal">
-    <input type="button"value="詳細を見る"class="btn btn-defaultLayout"id="gameresult-detail-button">
-    <a asp-controller="Home" asp-action="Index"class="btn btn-defaultLayout">ゲームの終了</a>
+    <div class="gameresult-area">
+        <div id="questioncount"></div>
+        <div id="answertruecount"></div>
+        <div id="answeraveragetime"></div>
+        <div id="playerlevel"></div>
+    </div>
+    <div class="button-area">
+        <input type="button"value="詳細を見る"class="btn btn-defaultLayout"id="gameresult-detail-button">
+        <a asp-controller="Home" asp-action="Index"class="btn btn-defaultLayout">ゲームの終了</a>
+    </div>
 </div>
 <!--解答の詳細を表示-->
 <div class="gameresult-detail-modal">
-    <div id="gameresult-detail"></div>
-    <input type="button"value="戻る"class="btn btn-defaultLayout"id="detail-to-result-button">
-    <a asp-controller="Home" asp-action="Index"class="btn btn-defaultLayout">ゲームの終了</a>
+    <div class="gameresult-detail-area">
+         <table class="table">
+              <thead>
+                <tr>
+                <th>問題</th>
+                <th>解答</th>
+                <th>解答時間</th>
+                <th> o / x</th>
+               </tr>
+            </thead>
+                <tbody>
+              @for(int i=0;i<5;i++){
+                <tr>
+                    <td id=""></td>
+                    <td id=""></td>
+                    <td id=""></td>
+                    <td id=""></td>
+                </tr>
+              }
+            </tbody>
+        </table>
+    <div class="button-area">
+        <input type="button"value="戻る"class="btn btn-defaultLayout"id="detail-to-result-button">
+        <a asp-controller="Home" asp-action="Index"class="btn btn-defaultLayout">ゲームの終了</a>
+    </div>
+   </div>
 </div>
 <!--js-->
 <script>
