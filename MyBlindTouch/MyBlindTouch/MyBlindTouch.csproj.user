@@ -14,6 +14,6 @@
     <WebStackScaffolding_IsViewGenerationSelected>True</WebStackScaffolding_IsViewGenerationSelected>
     <View_SelectedScaffolderID>RazorViewEmptyScaffolder</View_SelectedScaffolderID>
     <View_SelectedScaffolderCategoryPath>root/Common/MVC/View</View_SelectedScaffolderCategoryPath>
-    <NameOfLastUsedPublishProfile>C:\Users\youfu\programming\MyBlindTouch\MyBlindTouch\MyBlindTouch\Properties\PublishProfiles\MyBlindTouch - Web Deploy.pubxml</NameOfLastUsedPublishProfile>
+    <NameOfLastUsedPublishProfile>MyBlindTouch - Web Deploy</NameOfLastUsedPublishProfile>
   </PropertyGroup>
 </Project>

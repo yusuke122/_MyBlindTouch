@@ -9,4 +9,14 @@
     <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAqB2aTIp68EOWsv0ZG4/OogAAAAACAAAAAAAQZgAAAAEAACAAAAA+Esk4o0/vy6AGNYVgg51kPAMv0O8lpP1Fo7LBBvd3DQAAAAAOgAAAAAIAACAAAACslxLwVFawv4CA+/d/W/Ga9BFnZbdIvCDy6zeiNH5gtIAAAAAJWHAhpImK/PD+uTD4z/JGoCpbQfQ9lC5Z4BXqGzidGzPJIR+NIYXHxdUXCHxJNpsHZr8aEOqtxYqx9AvCdo+6UQ+6cuJgVFnqXEDQ655qBYFeEmVwXvKOOPcwVPq7VsZzGQrbVGG+wMtrYksxVkytcmdNZhRCa/glz+xe3H/Pn0AAAADg/QJuwz8cx4p438x8NEtq29LVo9/bTgG6eF2EOpUx+RkATufwAmYAhnHtI7xuRsFBmTWeqaaBkLLh5V8kisL3</EncryptedPassword>
     <History>True|2022-05-02T21:47:41.1257403Z;</History>
   </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="MyBlindTouchContext">
+      <Value>Server=%28localdb%29\mssqllocaldb%3bDatabase=MyBlindTouchContext-be58b0a9-53c3-47a5-bda9-8c8d4bab53ac%3bTrusted_Connection=True%3bMultipleActiveResultSets=true</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <EFMigrations Include="MyBlindTouch.Data.MyBlindTouchContext">
+      <Value>Server=%28localdb%29\mssqllocaldb%3bDatabase=MyBlindTouchContext-be58b0a9-53c3-47a5-bda9-8c8d4bab53ac%3bTrusted_Connection=True%3bMultipleActiveResultSets=true</Value>
+    </EFMigrations>
+  </ItemGroup>
 </Project>

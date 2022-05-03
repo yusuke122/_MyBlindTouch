@@ -9,5 +9,6 @@ namespace MyBlindTouch.Models
         public int Id { get; set; }
         public string? Level { get; set; }
         public string? QuizStr { get; set; }//出題する文字列
+
     }
 }

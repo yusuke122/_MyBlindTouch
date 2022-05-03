@@ -25,6 +25,7 @@ namespace MyBlindTouch.Controllers
         [HttpGet]
         public async Task<IActionResult> Index()
         {
+           
             return View(await _context.QuizModel.ToListAsync());
         }
 
@@ -81,6 +82,11 @@ namespace MyBlindTouch.Controllers
             {
                 return NotFound();
             }
+            List<SelectListItem> DropDownLevelList = new List<SelectListItem>();
+            DropDownLevelList.Add(new SelectListItem { Text = "初級", Value = "初級" });
+            DropDownLevelList.Add(new SelectListItem { Text = "中級", Value = "中級" });
+            DropDownLevelList.Add(new SelectListItem { Text = "上級", Value = "上級" });
+            ViewBag.DropDownLevelList = DropDownLevelList;
             return View(quizModel);
         }
 
