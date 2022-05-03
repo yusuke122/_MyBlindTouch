@@ -11,7 +11,7 @@
   </PropertyGroup>
   <ItemGroup>
     <DestinationConnectionStrings Include="MyBlindTouchContext">
-      <Value>Server=%28localdb%29\mssqllocaldb%3bDatabase=MyBlindTouchContext-be58b0a9-53c3-47a5-bda9-8c8d4bab53ac%3bTrusted_Connection=True%3bMultipleActiveResultSets=true</Value>
+      <Value>Server=tcp:myblindtouchserver.database.windows.net,1433%3bInitial Catalog=MyBlindTouchDB%3bPersist Security Info=False%3bUser ID=youfufumu%3bPassword={your_password}%3bMultipleActiveResultSets=False%3bEncrypt=True%3bTrustServerCertificate=False%3bConnection Timeout=30%3b</Value>
     </DestinationConnectionStrings>
   </ItemGroup>
   <ItemGroup>
