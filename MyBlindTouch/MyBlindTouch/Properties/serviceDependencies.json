@@ -2,11 +2,7 @@
   "dependencies": {
     "mssql1": {
       "type": "mssql",
-      "connectionId": "myblindtouchDB"
-    },
-    "secrets1": {
-      "type": "secrets",
-      "connectionId": "VaultUri"
+      "connectionId": "ConnectionStrings:MyBlindTouchContext"
     }
   }
 }

@@ -3,4 +3,7 @@
   <parameter name="IIS Web Application Name" description="" value="MyBlindTouch" tags="IisApp">
     <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\youfu\\programming\\MyBlindTouch\\MyBlindTouch\\MyBlindTouch\\obj\\Release\\net6\.0\\PubTmp\\Out\\$" />
   </parameter>
+  <parameter name="MyBlindTouch.Data.MyBlindTouchContext" description="" value="Data Source=tcp:myblindtouchserver.database.windows.net,1433;Initial Catalog=myblindtouchDB;User Id=youfufumu@gmail.com@myblindtouchserver;Password=H5?p7AAr7uYtQ" tags="dbfullsql">
+    <parameterEntry kind="ProviderPath" scope="dbfullsql" match="^C:\\Users\\youfu\\programming\\MyBlindTouch\\MyBlindTouch\\MyBlindTouch\\obj\\Release\\net6\.0\\PubTmp\\EFSQLScripts\\MyBlindTouch\.Data\.MyBlindTouchContext\.sql$" />
+  </parameter>
 </parameters>
