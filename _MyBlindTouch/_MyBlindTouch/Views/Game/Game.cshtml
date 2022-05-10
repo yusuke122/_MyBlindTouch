@@ -1,0 +1,156 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model _MyBlindTouch.Models.GameModel
+@using Newtonsoft.Json;
+@using System.IO;  
+
+@{
+    for (int i=0;i<Model.QuizStrCopy.Count;i++)//全問題でfor文を回す
+    {
+        //LevelList[0]==true:初級が選択されている
+        if(Model.LevelCopy[i]=="初級" && Model.LevelList[0]==true)
+        {
+            Model.QuizStrOutputList.Add(Model.QuizStrCopy[i]);
+        }
+        //LevelList[1]==true:中級が選択されている
+        else if(Model.LevelCopy[i]=="中級" && Model.LevelList[1]==true)
+        {
+            Model.QuizStrOutputList.Add(Model.QuizStrCopy[i]);
+        }
+        //LevelList[2]==true:上級が選択されている
+        else if(Model.LevelCopy[i]=="上級" && Model.LevelList[2]==true)
+        {
+            Model.QuizStrOutputList.Add(Model.QuizStrCopy[i]);
+        }
+    }
+    
+    Model.GameTime = ViewBag.gametime;
+    Model.QuestionTime = ViewBag.questiontime;
+    Model.GameSound = ViewBag.soundonoff;
+    Model.SoundVolume = ViewBag.gamesound;
+    
+    
+
+    //GameModelをjsonにシリアライズしてjsに渡す
+    var JsonData = JsonConvert.SerializeObject(Model);  
+     // シリアライズ済みデータをファイルに書き込み
+    File.WriteAllText(@"SettingsData.json",JsonData );
+}
+<!--html-->
+<!--開始時のカウント表示-->
+<div class="startcount-modal">
+    <div id="sec"></div>
+</div>
+<!--メインプレイ画面-->
+<div class="gametime-modal">
+    <div class="unvisible-area"></div>
+
+    <label for="gametime">残り時間:</label>
+    <div id="gametime"></div>
+</div>
+<div class="gameplay-modal">
+    <input type="button"value="focus"class="btn btn-defaultLayout"id="focus-button">
+    <div class="QuizStrArea">
+        <div id="question"></div>
+    </div>
+    <div class="form-group">
+        <input type="text"placeholder="入力して下さい"id="answer">
+    </div>
+    <input type="button"value="一時停止"class="btn btn-defaultLayout"id="pause-button">
+</div>
+<!--true modal -->
+<div class="true-modal">
+    <div id="true">〇</div>
+</div>
+<!--false modal -->
+<div class="false-modal">
+    <div id="false">✕</div>
+</div>
+<!--一時停止画面-->
+<div class="pause-modal">
+    <div id="pause">PAUSE</div>
+    <div class="button-area">
+             <input type="button"value="続ける"class="btn btn-defaultLayout"id="pause-replay-button">
+             <a asp-controller="Home" asp-action="Index"class="btn btn-defaultLayout">ゲームの終了</a>
+    </div>
+</div>
+<!--loading-->
+<div class="modal-overlay loading-modal">
+    <div class="loader"><div id="loading">Loading..</div></div>
+</div>
+<!--ゲーム終了時の画面-->
+<div class="gameover-modal">
+    <div id="gameover">GAME OVER</div>
+</div>
+
+<!--解答の結果を表示-->
+
+<div class="gameresult-modal">
+    <div class="gameresult-area">
+        <div id="questioncount"></div>
+        <div id="answertruecount"></div>
+        <div id="answeraveragetime"></div>
+        <div id="playerlevel"></div>
+    </div>
+    <div class="button-area">
+        <input type="button"value="詳細を見る"class="btn btn-defaultLayout"id="gameresult-detail-button">
+        <a asp-controller="Home" asp-action="Index"class="btn btn-defaultLayout">ゲームの終了</a>
+    </div>
+</div>
+<!--解答の詳細を表示-->
+<div class="gameresult-detail-modal">
+    <div class="gameresult-detail-area">
+        <div id="gameresult-details"></div>
+    <div class="button-area">
+        <input type="button"value="戻る"class="btn btn-defaultLayout"id="detail-to-result-button">
+        <a asp-controller="Home" asp-action="Index"class="btn btn-defaultLayout">ゲームの終了</a>
+    </div>
+   </div>
+</div>
+<!--js-->
+<script>
+window.onload=()=>{
+  //音を出すためにロード
+
+  //ajax通信でjsonを読み取り
+  
+  $.ajax({
+    // 読み込みの設定
+    type: "GET",
+    url: "SettingsData.json", // ファイルパス（相対パス）
+    dataType: "json", // ファイル形式
+    async: false // 非同期通信フラグ
+}).then(
+    function (json) {
+        // 読み込み成功時の処理
+        console.log("読み込みに成功しました");
+        console.log(json)
+        json.forEach(function (data) {
+            console.log(data)
+        });
+    },
+    function (jqXHR, textStatus, errorThrown) {
+        // 読み込み失敗時の処理
+        console.log("読み込みに失敗しました");
+        // httpステータス
+        console.log("jqXHR : " + jqXHR.status);
+        // タイムアウト、パースエラー
+        console.log("textStatus : " + textStatus);
+        // エラーの詳細情報
+        console.log("errorThrown : " + errorThrown.message);
+    });
+  
+  FirstCountDown();
+  //csの文字列をjsの配列へ格納
+  DefalutOutputList.push("Hello");
+  DefaultOutputList.push("Console.WriteLine");
+  DefaultOutputList.push("public static void main");
+  DefaultOutputList.push("Welcome");
+  DefaultOutputList.push("Console.WriteLine");
+  DefaultOutputList.push("getElementById");
+
+  
+  
+};
+</script>

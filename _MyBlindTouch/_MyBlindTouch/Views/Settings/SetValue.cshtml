@@ -1,0 +1,29 @@
+﻿@{
+    ViewData["Title"] = "MyBlindTouch-SetValue";
+    
+}
+@model _MyBlindTouch.Models.SettingsModel
+@using Microsoft.AspNetCore.Http
+<div class="modal-overlay loading-modal open-modal">
+    <div class="loader"><div id="loading">Loading..</div></div>
+</div>
+<div class="settings-change-modal">
+    <div class="modal-container">
+        <h3>設定が変更されました</h3>
+        <div class="button-area">
+          <a asp-controller="Settings" asp-action="Other"class="btn btn-defaultLayout">戻る</a>
+        </div>
+      </div>
+<script>
+
+setTimeout(()=>{
+    LoadingModal.classList.remove("open-modal");
+    SettingsChangeModal.classList.add("open-modal");
+},1500);
+window.onload = () => {
+    currentsoundid.addEventListener('input', soundRangeOnChange); // soundスライダー変化時にイベントを発火
+    setCurrentValue(currentsoundid.value); // ページ読み込み時に値をセット
+    
+};
+</script>
+</div>

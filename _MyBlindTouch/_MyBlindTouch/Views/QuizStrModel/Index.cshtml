@@ -1,0 +1,44 @@
+﻿@model IEnumerable<_MyBlindTouch.Models.QuizStrModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="banner QuizSetting">
+    <h2>出題設定</h2>
+
+    <p>
+        <a class="btn btn-defaultLayout" asp-action="Create">問題の追加</a>
+    </p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    難易度 
+                    
+                </th>
+                <th>
+                    問題
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+    @foreach (var item in Model) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Level)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.QuizStr)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">編集</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">削除</a>
+                </td>
+            </tr>
+    }
+        </tbody>
+    </table>
+    <a asp-controller="Home" asp-action="Index"class="btn btn-defaultLayout">戻る</a>
+</div>

@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MyBlindTouch</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/settings.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/spinner.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/style.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/game.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/modal.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/_MyBlindTouch.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/_MyBlindTouch.styles.css" asp-append-version="true" />
+    <!-- font-awesome -->
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Exo:400,700" rel="stylesheet"> 
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</head>
+<body>
+    <div id="content">
+     <!--音源のソース読み込み-->
+    <audio id="BGMSound" src="~/sound/かえるのピアノ.mp3" preload="auto" type="audio/mp3"></audio>
+    <audio id="ClickSound" src="~/sound/決定ボタン押下44.mp3"preload="auto" type="audio/mp3"></audio>
+    <audio id="ModalSound" src="~/sound/カーソル移動7.mp3"preload="auto" type="audio/mp3"></audio>
+    <audio id="GameStartSound" src="~/sound/shrill_whistle1.mp3"preload="auto" type="audio/mp3"></audio>
+    <audio id="StartCountSound" src="~/sound/stopwatch1.mp3"preload="auto" type="audio/mp3"></audio>
+    <audio id="TimeLimitSound" src="~/sound/stopwatch2.mp3"preload="auto" type="audio/mp3"></audio>
+    <audio id="TrueSound" src="~/sound/クイズ正解2.mp3"preload="auto" type="audio/mp3"></audio>
+    <audio id="FalseSound" src="~/sound/クイズ不正解2.mp3"preload="auto" type="audio/mp3"></audio>
+    <!--hiddenでボタンを設置-->
+    <!--
+    <input type="button"id="BGM-button Sound-button"value="BGMbtn">
+    <input type="button"id="Click-button Sound-button"value="Clickbtn"/>
+    <input type="button"id="Modal-button Sound-button"value="Modalbtn"/>
+    <input type="button"id="GameStart-button Sound-button"value="GSbtn"/>
+    <input type="button"id="StartCount-button Sound-button"value="SCbtn"/>
+    <input type="button"id="TimeLimit-button Sound-button"value="TLbtn"/>
+    <input type="button"id="FalseSound-button Sound-button"value="Fbtn"/>
+    <input type="button"id="TrueSound-button Sound-button"value="Tbtn"/>
+    </div>-->
+        
+    <div class="area" >
+                <ul class="circles">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                </ul>
+        </div >
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            <script type="text/javascript">
+        </script>
+            @RenderBody()
+        </main>
+        
+    </div>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/game.js" asp-append-version="true"charset="Shift_JIS"></script>    
+    <script src="~/js/sound.js" asp-append-version="true"charset="Shift_JIS"></script>    
+    <script src="~/js/settings.js" asp-append-version="true"charset="Shift_JIS"></script>    
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

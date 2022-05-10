@@ -1,0 +1,36 @@
+﻿/*エリアはclass 要素はid*/
+#sec{
+    color:white;
+    font-size:10rem;
+}
+#answer {
+    box-sizing: border-box; /*横幅の解釈をpadding, borderまでとする*/
+    
+}
+#true {
+    color: red;
+    font-size: 30rem;
+}
+#false {
+    color: blue;
+    font-size: 30rem;
+}
+#pause {
+    font-size: 5rem;
+}
+#gameover {
+    font-size: 5rem;
+}
+#focus-button {
+    visibility:hidden;
+}
+.button-area {
+    display: inline-block !important;
+    opacity:1 !important;
+}
+.gameresult-area{
+    font-size:2rem;
+}
+.unvisible-area{
+    visibility:visible;
+}

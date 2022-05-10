@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewData["Title"] = "MyBlindTouch-settings_other";
+}
+@model _MyBlindTouch.Models.SettingsModel
+@using Microsoft.AspNetCore.Http
+
+<div class="banner">
+    <h3>時間の設定</h3>
+    <form method="post" asp-controller="Settings" asp-action="SetValue">
+        プレイ時間：<input type="number"name="gametime"min=10 value=@ViewBag.gametime />秒</br>
+        解答時間：<input type="number"name="questiontime"min=1 value=@ViewBag.questiontime />秒</br>
+    </br>
+    <h3>音の設定</h3>
+        ON @Html.RadioButtonFor(expression:model=>model.SoundOnOff,value:"soundon")
+        OFF @Html.RadioButtonFor(expression:model=>model.SoundOnOff,value:"soundoff")</br>
+        音量:<input type="range"name="gamesound"min=1 max=100 value=@ViewBag.gamesound id="gamesoundrange"/>
+        </br>
+        <div id="volumeid"></div>
+        <input type="submit"value="変更"class="btn btn-defaultLayout"id="settingschange">
+        <a asp-controller="Home" asp-action="Index"class="btn btn-defaultLayout">戻る</a>
+    </form>
+    <script>
+        window.onload = () => {
+            currentsoundid.addEventListener('input', soundRangeOnChange); // soundスライダー変化時にイベントを発火
+            setCurrentValue(currentsoundid.value); // ページ読み込み時に値をセット
+        };
+    </script>
+</div>
