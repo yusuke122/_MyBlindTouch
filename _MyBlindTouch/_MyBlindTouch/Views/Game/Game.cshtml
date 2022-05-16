@@ -24,12 +24,16 @@
             Model.QuizStrOutputList.Add(Model.QuizStrCopy[i]);
         }
     }
-    
+    /*
     Model.GameTime = ViewBag.gametime;
     Model.QuestionTime = ViewBag.questiontime;
     Model.GameSound = ViewBag.soundonoff;
     Model.SoundVolume = ViewBag.gamesound;
-    
+    */
+    Model.GameTime = 30;
+    Model.QuestionTime = 5;
+    Model.GameSound = "soundoff";
+    Model.SoundVolume = 50;
     
 
     //GameModelをjsonにシリアライズしてjsに渡す
